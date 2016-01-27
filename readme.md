@@ -1,7 +1,12 @@
 Ffm Orderoptionindicator Extension
 =====================
 Indicate why an order doesn't have certain options in the admin order view
+![Options menu](http://i.imgur.com/vHa4tPt.png)
 
+Compatibility
+---------
+- Magento EE 1.14.x
+- Magento CE 1.9.2.x
 
 Developer
 ---------
