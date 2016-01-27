@@ -1,0 +1,4 @@
+src/app/code/community/Ffm/Orderoptionindicator               app/code/community/Ffm/Orderoptionindicator
+src/app/design/adminhtml/default/default/layout/ffm_orderoptionindicator.xml     app/design/adminhtml/default/default/layout/ffm_orderoptionindicator.xml
+src/app/design/adminhtml/default/default/template/ffm_orderoptionindicator     app/design/adminhtml/default/default/template/ffm_orderoptionindicator
+src/app/etc/modules/Ffm_Orderoptionindicator.xml              app/etc/modules/Ffm_Orderoptionindicator.xml

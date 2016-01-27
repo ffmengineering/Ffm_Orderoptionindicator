@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ffm_Orderoptionindicator>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Adminhtml/>
+                <Mage_Sales/>
+            </depends>
+        </Ffm_Orderoptionindicator>
+    </modules>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffm_Orderoptionindicator extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_Orderoptionindicator
+ * @copyright      Copyright (c) 2015
+ * @license        OSL 3.0 http://opensource.org/licenses/OSL-3.0
+ */
+ -->
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="content">
+            <block type="ffm_orderoptionindicator/adminhtml_indicator" before="-" name="ffm_orderoptionindicator_indicator" template="ffm_orderoptionindicator/indicator.phtml"/>
+        </reference>
+    </adminhtml_sales_order_view>
+</layout>

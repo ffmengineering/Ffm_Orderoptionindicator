@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffm_Orderoptionindicator extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_Orderoptionindicator
+ * @copyright      Copyright (c) 2015
+ * @license        OSL 3.0 http://opensource.org/licenses/OSL-3.0
+ */
+ -->
+<config>
+    <modules>
+        <Ffm_Orderoptionindicator>
+            <version>0.1.0</version>
+        </Ffm_Orderoptionindicator>
+    </modules>
+    <global>
+        <blocks>
+            <ffm_orderoptionindicator>
+                <class>Ffm_Orderoptionindicator_Block</class>
+            </ffm_orderoptionindicator>
+        </blocks>
+        <helpers>
+            <ffm_orderoptionindicator>
+                <class>Ffm_Orderoptionindicator_Helper</class>
+            </ffm_orderoptionindicator>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <ffm_contactprofile>
+                    <file>ffm_orderoptionindicator.xml</file>
+                </ffm_contactprofile>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

@@ -1,0 +1,65 @@
+<?php
+/**
+ * Ffm_Orderoptionindicator extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_Orderoptionindicator
+ * @copyright      Copyright (c) 2015
+ * @license        OSL 3.0 http://opensource.org/licenses/OSL-3.0
+ */
+
+$options = [
+    'edit' => $this->getCanEdit(),
+    'cancel' => $this->getCanCancel(),
+    'email' => $this->getCanEmail(),
+    'credit memo' => $this->getCanCredit(),
+    'void payment' => $this->getCanVoidPayment(),
+    'hold' => $this->getCanHold(),
+    'unhold' => $this->getCanUnhold(),
+    'review payment' => $this->getCanReviewPayment(),
+    'invoice' => $this->getCanInvoice(),
+    'ship' => $this->getCanShip(),
+    'reorder' => $this->getCanReorder(),
+];
+
+?>
+<a href="#" class="show-options-indicator">
+    <span><?php echo $this->__('Show disabled options');?></span>
+
+    <ul class="order-options-indicator">
+        <?php foreach ($options as $label => $option):?>
+            <?php if (is_array($option)):?>
+                <li class="option">
+                    <span><?php echo $this->__(ucwords($label));?></span>
+                    <ul class="reasons">
+                        <li><?php echo implode('</li><li>', $option);?></li>
+                    </ul>
+                </li>
+            <?php endif;?>
+        <?php endforeach;?>
+    </ul>
+</a>
+
+<?php
+/**
+ * Inline styling, due to deadline.
+ * Whoever did this should be ashamed (that's me, and I am)
+ * @TODO move to stylesheet
+ */
+?>
+<style>
+    a.show-options-indicator {position:relative;}
+    a.show-options-indicator .order-options-indicator {width: 100%; float:left; display: none; padding: 15px; color: #555; position:absolute; z-index: 999; background: #eee; border: #555 solid 1px;}
+    a.show-options-indicator:hover .order-options-indicator {display: block}
+    .order-options-indicator li {width: auto; float:left; clear: both;}
+    .order-options-indicator li.option span {font-weight:bold;}
+    .order-options-indicator li.option ul.reasons {list-style-type: circle; padding-left: 15px;}
+    .order-options-indicator li.option ul.reasons li {margin-bottom: 5px; }
+</style>
