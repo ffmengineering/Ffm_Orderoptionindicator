@@ -157,7 +157,7 @@ class Ffm_Orderoptionindicator_Block_Adminhtml_Indicator extends Mage_Adminhtml_
         $order = $this->getOrder();
         $unallowedOptions = [];
 
-        if ($this->_isAllowedAction('creditmemo') && ($order->canCreditmemo() || $order->hasForcedCanCreditmemo())) return true; // no blocking issues
+        if ($this->_isAllowedAction('creditmemo') && $order->canCreditmemo()) return true; // no blocking issues
 
         if (!$this->_isAllowedAction('creditmemo')) {
             $unallowedOptions[] = $this->__('Insufficient rights');
@@ -183,8 +183,8 @@ class Ffm_Orderoptionindicator_Block_Adminhtml_Indicator extends Mage_Adminhtml_
          * for this we have additional diapason for 0
          * TotalPaid - contains amount, that were not rounded.
          */
-        if (abs($order->getStore()->roundPrice($order->getTotalPaid()) - $order->getTotalRefunded()) < .0001) {
-            return true;
+        if (abs($order->getStore()->roundPrice($order->getTotalPaid()) - $order->getTotalRefunded()) > .0001) {
+            $unallowedOptions[] = $this->__('Rounding issue');
         }
 
         if ($order->getActionFlag($order::ACTION_FLAG_EDIT) === false) {
