@@ -37,9 +37,9 @@
     <adminhtml>
         <layout>
             <updates>
-                <ffm_contactprofile>
+                <ffm_orderoptionindicator>
                     <file>ffm_orderoptionindicator.xml</file>
-                </ffm_contactprofile>
+                </ffm_orderoptionindicator>
             </updates>
         </layout>
     </adminhtml>

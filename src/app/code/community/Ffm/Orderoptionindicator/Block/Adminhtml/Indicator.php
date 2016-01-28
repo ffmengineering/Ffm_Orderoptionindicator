@@ -321,7 +321,7 @@ class Ffm_Orderoptionindicator_Block_Adminhtml_Indicator extends Mage_Adminhtml_
         }
 
         $invoiced = false;
-        foreach ($this->getAllItems() as $item) {
+        foreach ($order->getAllItems() as $item) {
             if ($item->getQtyToInvoice()>0 && !$item->getLockedDoInvoice()) {
                 $invoiced = true; break;
             }
