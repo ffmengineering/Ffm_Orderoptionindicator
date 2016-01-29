@@ -164,7 +164,7 @@ class Ffm_Orderoptionindicator_Block_Adminhtml_Indicator extends Mage_Adminhtml_
         }
 
 
-        if (!$order->hasForcedCanCreditmemo()) {
+        if (false === $order->hasForcedCanCreditmemo()) {
             $unallowedOptions[] = $this->__("Is forced prevented");
         }
 
