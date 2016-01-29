@@ -1,7 +1,7 @@
 {
     "name": "Ffm/Orderoptionindicator",
     "license": "OSL-3.0",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "type": "magento-module",
     "description": "Indicated why orders can t be credited, holded, invoiced, etc",
     "homepage": "http://www.fitforme.nl",
