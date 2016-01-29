@@ -178,6 +178,10 @@ class Ffm_Orderoptionindicator_Block_Adminhtml_Indicator extends Mage_Adminhtml_
             $unallowedOptions[] = $this->__("Order is closed");
         }
 
+        if ($order->getTotalPaid() < $order->getGrandTotal()) {
+            $unallowedOptions[] = $this->__("Invoice not fully paid yet ({$order->getTotalPaid()})");
+        }
+
         /**
          * We can have problem with float in php (on some server $a=762.73;$b=762.73; $a-$b!=0)
          * for this we have additional diapason for 0
